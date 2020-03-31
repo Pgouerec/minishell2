@@ -9,5 +9,5 @@ script:
   - make fclean
   - make
 
-after_success: ./travis_ci/send_notifications.sh success "https://discordapp.com/api/webhooks/694525353925935114/VetmnaTPbtszfACMFxRbXyboGZZNNUNZoeqKL_qYH73TUfjjbF4O9YTM-vkTeh5s3VTr"
-after_failure: ./travis_ci/send_notifications.sh failure "https://discordapp.com/api/webhooks/694525353925935114/VetmnaTPbtszfACMFxRbXyboGZZNNUNZoeqKL_qYH73TUfjjbF4O9YTM-vkTeh5s3VTr"
+after_success: sh ./travis_ci/send_notifications.sh success "https://discordapp.com/api/webhooks/694525353925935114/VetmnaTPbtszfACMFxRbXyboGZZNNUNZoeqKL_qYH73TUfjjbF4O9YTM-vkTeh5s3VTr"
+after_failure: sh ./travis_ci/send_notifications.sh failure "https://discordapp.com/api/webhooks/694525353925935114/VetmnaTPbtszfACMFxRbXyboGZZNNUNZoeqKL_qYH73TUfjjbF4O9YTM-vkTeh5s3VTr"
