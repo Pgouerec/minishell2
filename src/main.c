@@ -6,9 +6,12 @@
 */
 
 #include "my.h"
-#include "minishell2.h"
+#include "minishell.h"
 
-void main(int ac, char *av, char **env)
+int main(int ac, char **av, char **env)
 {
-    my_printf("mysh\n");
+    char **mysh_env = get_env(env);
+
+    get_cmd(mysh_env);
+    return (0);
 }

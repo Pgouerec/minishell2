@@ -21,6 +21,7 @@ char **get_env(char **env);
 int get_cmd(char **env);
 char **route_cmd(char *line, char **env);
 void printsh(char **env);
+void printsh_advanced(char **env);
 char *pwd_parse(char *pwd);
 char **parse_args(char *av);
 char **my_exit(char **av, char **env);
