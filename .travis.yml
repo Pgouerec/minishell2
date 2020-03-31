@@ -3,9 +3,6 @@ language:   c
 before_install:
     - sh ./travis_ci/install_criterion.sh
 
-install:  
-  - make get-deps
-
 compiler: gcc
 
 script: 
