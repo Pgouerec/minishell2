@@ -61,6 +61,7 @@ $(NAME_LIB):	$(OBJ)
 	@ar rc $(NAME_LIB) *.o
 	@cp $(NAME_LIB) ../
 	@cp $(NAME_H) ../../include/
+	make -C . clean
 
 clean:
 	@rm -rf *.o

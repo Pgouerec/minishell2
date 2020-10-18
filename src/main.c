@@ -6,12 +6,17 @@
 */
 
 #include "my.h"
-#include "minishell.h"
+#include "minishell2.h"
 
 int main(int ac, char **av, char **env)
 {
-    char **mysh_env = get_env(env);
+    int rel = 0;
+    minishell_t sh;
 
-    get_cmd(mysh_env);
+    if (init_global(&sh, env) != 0)
+        return (84);
+    rel = prompt(&sh);
+    if (global_free(&sh) != 0)
+        return (84);
     return (0);
 }

@@ -39,6 +39,7 @@ char *my_dec_to_bin(long dec);
 char *my_dec_to_hex(long dec, int size);
 void my_strerror(int err);
 char **my_str_to_word_array(char *str);
+int count_word(char *input);
 int is_alphanum(char const *str);
 
 int my_printf(char *s, ...);

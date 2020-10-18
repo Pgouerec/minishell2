@@ -10,7 +10,7 @@
 
 char **my_str_to_word_array(char *str)
 {
-    char **output = malloc(sizeof(char *) * 50);
+    char **output = malloc(sizeof(char *) * (count_word(str) + 1));
     char *tmp;
     int c = 0;
     int f = 0;
@@ -24,9 +24,23 @@ char **my_str_to_word_array(char *str)
         for (c = x ; str[c] != ' ' && str[c] != '\0' ; c++) {
             tmp[f] = str[c];
             f++;
+            tmp[f] = '\0';
         }
         output[p] = tmp;
         p++;
     }
+    output[p] = NULL;
     return (output);
+}
+
+int count_word(char *str)
+{
+    int nb_of_word = 0;
+
+    for (int x = 0 ; str[x] != '\0' ; x++) {
+        if (str[x] == ' ')
+            nb_of_word++;
+    }
+    nb_of_word++;
+    return nb_of_word;
 }
